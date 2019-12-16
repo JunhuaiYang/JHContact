@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/JHContactTrue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcuserdata/junhuai.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcuserdata/junhuai.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/JHContactTrue.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/AppDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/GroupViewController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/GroupViewController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonDetailsViewController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonDetailsViewController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonViewController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrue/main.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrueTests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrueTests/JHContactTrueTests.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrueUITests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JHContactTrueUITests/JHContactTrueUITests.m" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6C373302-0C22-45EB-9929-DFA6404BE6B5" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1Um4VTo1toaPtXeqO5zAaEblo3j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="JHContactTrue" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="JHContactTrue" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="JHContactTrue" TARGET_NAME="JHContactTrue" CONFIG_NAME="Debug" SCHEME_NAME="JHContactTrue" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="JHContactTrue" RUN_TARGET_NAME="JHContactTrue" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="" />
+      <created>1575948459137</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575948459137</updated>
+      <workItem from="1575948461195" duration="58145000" />
+      <workItem from="1576203176530" duration="9413000" />
+      <workItem from="1576221956305" duration="14018000" />
+      <workItem from="1576416962047" duration="4573000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
