@@ -21,7 +21,7 @@
 //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
     // 新版本  通过传进来的scene参数即可获得屏幕参数
-    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *) scene];
     self.window.backgroundColor = [UIColor whiteColor];
 
     // 创建 tabview

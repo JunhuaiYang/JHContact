@@ -38,7 +38,7 @@
     int count = 0;
     for (CNLabeledValue *labeledValue in contact.phoneNumbers) {
         CNPhoneNumber *phoneNumber = labeledValue.value;
-        NSLog(@"phoneNumber%d: %@",++count, phoneNumber.stringValue);
+        NSLog(@"phoneNumber%d: %@", ++count, phoneNumber.stringValue);
     }
 }
 

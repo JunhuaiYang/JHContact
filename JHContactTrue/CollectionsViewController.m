@@ -25,9 +25,9 @@
     self.sectionTitle = [[NSMutableArray alloc] init];
     for (int i = 'A'; i <= 'Z'; ++i) {
         NSMutableArray *array = [[NSMutableArray alloc] init];
-        [self.sectionTitle addObject:[NSString stringWithFormat:@"%c",(char)i]];
+        [self.sectionTitle addObject:[NSString stringWithFormat:@"%c", (char) i]];
         for (int j = 1; j <= 8; ++j) {
-            [array addObject:[NSString stringWithFormat:@"%c%d",(char)i, j]];
+            [array addObject:[NSString stringWithFormat:@"%c%d", (char) i, j]];
         }
         [self.tableData addObject:array];
     }
@@ -56,19 +56,19 @@
 
 // 返回每组的列数 section是组数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.tableData objectAtIndex:section] count];
+    return [self.tableData[(NSUInteger) section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *str = @"Cell";
 //    尝试获得可复用的 cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-    if(cell == nil){
+    if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
     }
 
     // Configure the cell...
-    cell.textLabel.text = self.tableData[indexPath.section][indexPath.row];
+    cell.textLabel.text = self.tableData[(NSUInteger) indexPath.section][(NSUInteger) indexPath.row];
 
     return cell;
 }
@@ -90,7 +90,7 @@
 
 // 获取头部标题
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.tableData[section][0] substringToIndex:1];
+    return [self.tableData[(NSUInteger) section][0] substringToIndex:1];
 }
 
 // 开启索引显示

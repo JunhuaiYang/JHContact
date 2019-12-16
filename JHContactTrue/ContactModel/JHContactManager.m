@@ -6,12 +6,12 @@
 #import "JHContactManager.h"
 
 @interface JHContactManager ()
-@property (nonatomic, copy) NSArray *fetchKeys;
+@property(nonatomic, copy) NSArray *fetchKeys;
 @end
 
 @implementation JHContactManager {
     CNContactStore *_store;
-    NSMutableArray<JHPersonModel* > *_persons;
+    NSMutableArray<JHPersonModel * > *_persons;
 }
 
 /**
@@ -19,7 +19,7 @@
  * @return
  */
 - (NSArray *)fetchKeys {
-    if (!_fetchKeys){
+    if (!_fetchKeys) {
         _fetchKeys = @[[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName],   // 这个可以自动生成姓名格式
                 CNContactGivenNameKey, CNContactFamilyNameKey, CNContactNicknameKey, CNContactPhoneNumbersKey,
                 CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey, CNContactThumbnailImageDataKey];
@@ -53,17 +53,15 @@
 - (void)requestContactAuthorization:(void (^)(void))completion {
     // 获得授权状态
     CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
-    BOOL result = NO;
     // 如果是未授权，则请求授权  这里是并行的，回调
-    if (status == CNAuthorizationStatusNotDetermined){
+    if (status == CNAuthorizationStatusNotDetermined) {
 //        NSLog(@"in");
         [_store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError *error) {
-            if (granted){
+            if (granted) {
                 NSLog(@"授权成功");
                 completion();  // 回调刷新
 //                NSLog(@"回调时 %@", [NSThread currentThread]);
-            }
-            else
+            } else
                 NSLog(@"授权失败");
 //            result = granted;
             self.authorized = granted;
@@ -77,7 +75,7 @@
 }
 
 // 获得所有联系人
--(void) getAllPerson{
+- (void)getAllPerson {
     // 先确定要请求的 keys
     // 创建请求对象
     CNContactFetchRequest *request = [[CNContactFetchRequest alloc] initWithKeysToFetch:self.fetchKeys];
@@ -93,7 +91,7 @@
 //    NSLog(@"%@", error);
 }
 
--(NSArray<JHPersonModel*> *) getPersons{
+- (NSArray<JHPersonModel *> *)getPersons {
     // 未获授权时
 //    if (![self isAuthorized])
 //    {
@@ -107,7 +105,6 @@
     // 返回不可改变的对象
     return [_persons copy];
 }
-
 
 
 @end

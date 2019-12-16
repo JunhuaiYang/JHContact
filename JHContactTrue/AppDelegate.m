@@ -7,10 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "PhoneViewController.h"
-#import "PersonViewController.h"
-#import "CollectionsViewController.h"
-#import "GroupViewController.h"
 
 @interface AppDelegate ()
 

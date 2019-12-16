@@ -12,11 +12,11 @@
 #import "JHContactManager.h"
 #import "JHTableViewCell.h"
 
-@interface PersonViewController ()  <CNContactPickerDelegate>
-@property (nonatomic, strong) NSArray<JHPersonModel* > *persons;
-@property (nonatomic, strong) NSArray<NSArray* > *sortedPersons;
-@property (nonatomic, strong) NSArray *sectionTitles;
-@property (nonatomic, strong) UILabel *infoText;
+@interface PersonViewController () <CNContactPickerDelegate>
+@property(nonatomic, strong) NSArray<JHPersonModel * > *persons;
+@property(nonatomic, strong) NSArray<NSArray * > *sortedPersons;
+@property(nonatomic, strong) NSArray *sectionTitles;
+@property(nonatomic, strong) UILabel *infoText;
 @end
 
 @implementation PersonViewController
@@ -24,15 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-     UIBarButtonItem *barButtonItemAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonAddPress)];
-     self.navigationItem.rightBarButtonItem = barButtonItemAdd;
+    UIBarButtonItem *barButtonItemAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonAddPress)];
+    self.navigationItem.rightBarButtonItem = barButtonItemAdd;
 
-     // 如果没有取得权限则显示该标签
+    // 如果没有取得权限则显示该标签
     self.infoText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 80)];
     self.infoText.text = @"没有获得通讯录权限";
     self.infoText.font = [UIFont systemFontOfSize:20];
     self.infoText.textColor = [UIColor systemGray4Color];
-    self.infoText.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 3 );
+    self.infoText.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 3);
     self.infoText.textAlignment = NSTextAlignmentCenter;  // 文字居中效果
     [self.view addSubview:self.infoText];
 
@@ -52,17 +52,16 @@
 }
 
 
-
 // 把数据刷新放到将要显示中来做 x
 // 改为通知刷新
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
--(void) refresh{
+- (void)refresh {
 //    NSLog(@"改变");
     // 数据刷新
-    if ([self getData]){
+    if ([self getData]) {
         // 排序
         [self sortPerson];
         // 填充数据
@@ -70,25 +69,25 @@
     }
 }
 
--(void) sortPerson{
+- (void)sortPerson {
     UILocalizedIndexedCollation *indexedCollation = [UILocalizedIndexedCollation currentCollation];
     NSMutableArray *mutableTitles = [[NSMutableArray alloc] initWithArray:[indexedCollation sectionTitles]];
-    NSMutableArray<NSMutableArray*> *mutablePersons = [NSMutableArray arrayWithCapacity:mutableTitles.count];
+    NSMutableArray<NSMutableArray *> *mutablePersons = [NSMutableArray arrayWithCapacity:mutableTitles.count];
     // 先把 27 个数组构建出来
     for (int i = 0; i < mutableTitles.count; ++i) {
         [mutablePersons addObject:[NSMutableArray array]];
     }
 //    NSLog(@"%@", mutableTitles);
     // 开始用框架排序
-    for (JHPersonModel * person in self.persons) {
+    for (JHPersonModel *person in self.persons) {
         NSInteger index = [indexedCollation sectionForObject:person collationStringSelector:@selector(fullName)];
         [mutablePersons[index] addObject:person];
     }
 
     // 移除为 0 的数组
-    for (NSInteger j = [indexedCollation sectionTitles].count - 1; j >= 0 ; j--) {
+    for (NSInteger j = [indexedCollation sectionTitles].count - 1; j >= 0; j--) {
 //        NSLog(@"%d", j);
-        if (mutablePersons[j].count == 0){
+        if (mutablePersons[j].count == 0) {
             [mutablePersons removeObjectAtIndex:j];
             [mutableTitles removeObjectAtIndex:j];
         }
@@ -100,10 +99,10 @@
 }
 
 
-- (BOOL) getData{
+- (BOOL)getData {
     JHContactManager *contactManager = [JHContactManager sharedInstance];
-        // 没有授权的话
-    if (![contactManager isAuthorized]){
+    // 没有授权的话
+    if (![contactManager isAuthorized]) {
         // 尝试获得授权
         [contactManager requestContactAuthorization:^{
             // 应该把它加到主队列里来完成
@@ -124,7 +123,7 @@
         // 显示提示标签
         self.infoText.hidden = NO;
         return NO;
-    } else{
+    } else {
         // 获取数据
         self.persons = [contactManager getPersons];
         // 把表格恢复为可以滑动
@@ -143,6 +142,7 @@
 
 
 #pragma mark Table View Delegate
+
 // 返回组数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.sortedPersons.count;
@@ -177,7 +177,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *str = @"Cell";
     JHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-    if(cell == nil){
+    if (cell == nil) {
         cell = [[JHTableViewCell alloc] initWithMyStyle:JHTableViewCellStylMain reuseIdentifier:str];
     }
 

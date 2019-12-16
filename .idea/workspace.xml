@@ -2,49 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JHContactTrue.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcuserdata/junhuai.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcuserdata/junhuai.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/JHContactTrue.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/AppDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/Base.lproj/Main.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/GroupViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/GroupViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonDetailsViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonDetailsViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrue/main.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrueTests/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrueTests/JHContactTrueTests.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrueUITests/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JHContactTrueUITests/JHContactTrueUITests.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +68,7 @@
       <workItem from="1575948461195" duration="58145000" />
       <workItem from="1576203176530" duration="9413000" />
       <workItem from="1576221956305" duration="14018000" />
-      <workItem from="1576416962047" duration="4573000" />
+      <workItem from="1576416962047" duration="5872000" />
     </task>
     <servers />
   </component>

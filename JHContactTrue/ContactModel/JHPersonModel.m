@@ -24,12 +24,12 @@
 
 /**
  * 通过 contact 来初始化
- * @param contact
- * @return
+ * @param contact  contact
+ * @return instancetype
  */
-- (instancetype) initWithContact:(CNContact *)contact{
+- (instancetype)initWithContact:(CNContact *)contact {
     self = [super init];
-    if (self){
+    if (self) {
         // 获取姓名
         self.fullName = [CNContactFormatter stringFromContact:contact style:CNContactFormatterStyleFullName];  // 自动格式化名字
         self.givenName = contact.givenName;
@@ -61,7 +61,7 @@
         self.emails = [emailValue copy];
 
         // 图片
-        if (contact.imageData){
+        if (contact.imageData) {
             self.image = [UIImage imageWithData:contact.imageData];
 //            NSLog(@"有图  %@", self.fullName);
         }
@@ -80,34 +80,20 @@
 }
 
 /// 标签转换
-/// @param label
-/// @return
--(NSString *) getTypes:(NSString *) label{
-    if ([label isEqualToString:CNLabelPhoneNumberMobile])
-        return [NSString stringWithFormat:@"手机"];
-    else if ([label isEqualToString:CNLabelPhoneNumberMain])
-        return [NSString stringWithFormat:@"主号码"];
-    else if ([label isEqualToString:CNLabelHome])
-        return [NSString stringWithFormat:@"家"];
-    else if ([label isEqualToString:CNLabelWork])
-        return [NSString stringWithFormat:@"公司"];
-    else if ([label isEqualToString:CNLabelSchool])
-        return [NSString stringWithFormat:@"学校"];
-    else if ([label isEqualToString:CNLabelPhoneNumberiPhone])
-        return [NSString stringWithFormat:@"iPhone"];
-    else if ([label isEqualToString:CNLabelPhoneNumberHomeFax])
-        return [NSString stringWithFormat:@"家用传真"];
-    else if ([label isEqualToString:CNLabelPhoneNumberWorkFax])
-        return [NSString stringWithFormat:@"工作传真"];
-    else
-        return [NSString stringWithFormat:@"其他"];
+/// @param tag 标记类型
+/// @return  转换后的类型
+- (NSString *)getTypes:(NSString *)tag {
+    NSDictionary *tagDic = @{CNLabelPhoneNumberMobile: @"手机", CNLabelPhoneNumberMain: @"主号码", CNLabelHome: @"家",
+            CNLabelWork: @"公司", CNLabelSchool: @"学校", CNLabelPhoneNumberiPhone: @"iPhone",
+            CNLabelPhoneNumberHomeFax: @"家用传真", CNLabelPhoneNumberWorkFax: @"工作传真",};
+    return tagDic[tag] ? tagDic[tag] : @"其他";
 }
 
 @end
 
 
 ///  JHValue
-@implementation JHValue{
+@implementation JHValue {
 
 }
 
