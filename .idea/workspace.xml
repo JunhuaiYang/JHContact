@@ -3,14 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHContactManager.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/ContactModel/JHPersonModel.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/AppDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/AppDelegate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/LaunchScreen.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Collections/CollectionsViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/CollectionsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Collections/CollectionsViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/GroupViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Group/GroupViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/GroupViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Group/GroupViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Common/JHTableViewCell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/JHTableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Common/JHTableViewCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonDetailsViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonDetailsViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonDetailsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonDetailsViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Phone/PhoneViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PhoneViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Phone/PhoneViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/SceneDelegate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/SceneDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/SceneDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/main.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/main.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +29,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6C373302-0C22-45EB-9929-DFA6404BE6B5" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_516BBCBD-3644-48B4-A949-0EEAB69C71BC" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -68,8 +79,16 @@
       <workItem from="1575948461195" duration="58145000" />
       <workItem from="1576203176530" duration="9413000" />
       <workItem from="1576221956305" duration="14018000" />
-      <workItem from="1576416962047" duration="5872000" />
+      <workItem from="1576416962047" duration="12472000" />
     </task>
+    <task id="LOCAL-00001" summary="reformat code">
+      <created>1576466059896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576466059896</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,5 +104,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="reformat code" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/JHContactTrue/Common/JHTableViewCell.m</url>
+          <line>104</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

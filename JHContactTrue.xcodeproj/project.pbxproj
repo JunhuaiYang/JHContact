@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F974491239F42C00058D80A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F974490239F42C00058D80A /* AppDelegate.m */; };
-		7F974494239F42C00058D80A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F974493239F42C00058D80A /* SceneDelegate.m */; };
 		7F97449C239F42C20058D80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F97449B239F42C20058D80A /* Assets.xcassets */; };
-		7F97449F239F42C20058D80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F97449D239F42C20058D80A /* LaunchScreen.storyboard */; };
-		7F9744A2239F42C20058D80A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744A1239F42C20058D80A /* main.m */; };
 		7F9744AC239F42C20058D80A /* JHContactTrueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744AB239F42C20058D80A /* JHContactTrueTests.m */; };
 		7F9744B7239F42C20058D80A /* JHContactTrueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744B6239F42C20058D80A /* JHContactTrueUITests.m */; };
-		7F9744C6239F70630058D80A /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744C5239F70630058D80A /* PhoneViewController.m */; };
-		7F9744C9239F709E0058D80A /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744C8239F709E0058D80A /* PersonViewController.m */; };
-		7F9744CC239F70FD0058D80A /* CollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744CB239F70FD0058D80A /* CollectionsViewController.m */; };
-		7F9744CF239F71130058D80A /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744CE239F71130058D80A /* GroupViewController.m */; };
-		7F9744D2239FA0D10058D80A /* PersonDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744D1239FA0D10058D80A /* PersonDetailsViewController.m */; };
-		7FDE2D8D23A3334400D2B0DC /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE2D8C23A3334400D2B0DC /* JHTableViewCell.m */; };
 		B53AA05B6B8722D6856466A3 /* JHPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA83BD88B1345A3AEA5CC /* JHPersonModel.m */; };
+		B53AA1D60148FB532920DAF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA65909EC27A71916A57F /* main.m */; };
+		B53AA214684910612624BA66 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA1708F681835B64A4934 /* GroupViewController.m */; };
+		B53AA235038A27BA746B6DEA /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA3A633D9E6AFE4C8333F /* PersonViewController.m */; };
+		B53AA40F3A381F098089D773 /* CollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA487FA7432E3E801FC4D /* CollectionsViewController.m */; };
+		B53AA9831C11810B8B1BE6F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53AA98FE12ACF035F64B50F /* LaunchScreen.storyboard */; };
 		B53AA98CF3C21700B24905C3 /* JHContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA709F1C82100A03B925D /* JHContactManager.m */; };
+		B53AAC230520DAD07C08CAC6 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA7B3655D05E4490916BA /* PhoneViewController.m */; };
+		B53AAD83F896A23B2DE3FC1A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA7A6D57C67206A69A318 /* SceneDelegate.m */; };
+		B53AAD9D0C7B2DC22452AE53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AAF6FEE13E7AC347614BE /* AppDelegate.m */; };
+		B53AAF653EFB264EBC70EFDA /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AAA4E94989C4FEE3B8C5C /* JHTableViewCell.m */; };
+		B53AAF9877ED23092431E8FB /* PersonDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA6730E79002943E22709 /* PersonDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,36 +43,36 @@
 
 /* Begin PBXFileReference section */
 		7F97448C239F42C00058D80A /* JHContactTrue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHContactTrue.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F97448F239F42C00058D80A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7F974490239F42C00058D80A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7F974492239F42C00058D80A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		7F974493239F42C00058D80A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		7F97449B239F42C20058D80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7F97449E239F42C20058D80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7F9744A0239F42C20058D80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F9744A1239F42C20058D80A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F9744A7239F42C20058D80A /* JHContactTrueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHContactTrueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9744AB239F42C20058D80A /* JHContactTrueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHContactTrueTests.m; sourceTree = "<group>"; };
 		7F9744AD239F42C20058D80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F9744B2239F42C20058D80A /* JHContactTrueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHContactTrueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9744B6239F42C20058D80A /* JHContactTrueUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHContactTrueUITests.m; sourceTree = "<group>"; };
 		7F9744B8239F42C20058D80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F9744C4239F70630058D80A /* PhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
-		7F9744C5239F70630058D80A /* PhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
-		7F9744C7239F709E0058D80A /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
-		7F9744C8239F709E0058D80A /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
-		7F9744CA239F70FD0058D80A /* CollectionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionsViewController.h; sourceTree = "<group>"; };
-		7F9744CB239F70FD0058D80A /* CollectionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionsViewController.m; sourceTree = "<group>"; };
-		7F9744CD239F71130058D80A /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
-		7F9744CE239F71130058D80A /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
-		7F9744D0239FA0D10058D80A /* PersonDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDetailsViewController.h; sourceTree = "<group>"; };
-		7F9744D1239FA0D10058D80A /* PersonDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsViewController.m; sourceTree = "<group>"; };
-		7FDE2D8B23A3334400D2B0DC /* JHTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
-		7FDE2D8C23A3334400D2B0DC /* JHTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
+		B53AA142C60833C7F0853C0C /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		B53AA1708F681835B64A4934 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		B53AA32354B38B1580060FA6 /* PersonDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailsViewController.h; sourceTree = "<group>"; };
+		B53AA3A633D9E6AFE4C8333F /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		B53AA3AF8629DCE03AF36115 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
+		B53AA487FA7432E3E801FC4D /* CollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionsViewController.m; sourceTree = "<group>"; };
+		B53AA52B241E166A3F0B8000 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B53AA65909EC27A71916A57F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B53AA6730E79002943E22709 /* PersonDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsViewController.m; sourceTree = "<group>"; };
+		B53AA6F9A97AE3EDA41945AD /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		B53AA709F1C82100A03B925D /* JHContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHContactManager.m; sourceTree = "<group>"; };
+		B53AA7A6D57C67206A69A318 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		B53AA7B3655D05E4490916BA /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
 		B53AA83BD88B1345A3AEA5CC /* JHPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPersonModel.m; sourceTree = "<group>"; };
+		B53AA9545954D9248DE8E9A2 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
+		B53AA98FE12ACF035F64B50F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B53AAA4E94989C4FEE3B8C5C /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
+		B53AAD1975747ED75916041F /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		B53AAE0BE008B9B98D207E02 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B53AAE78222BFF239C30F2E9 /* JHPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPersonModel.h; sourceTree = "<group>"; };
 		B53AAE9D8166628E44096E7E /* JHContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHContactManager.h; sourceTree = "<group>"; };
+		B53AAF1ADDB08403339452AB /* CollectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionsViewController.h; sourceTree = "<group>"; };
+		B53AAF6FEE13E7AC347614BE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,27 +123,15 @@
 		7F97448E239F42C00058D80A /* JHContactTrue */ = {
 			isa = PBXGroup;
 			children = (
-				7F97448F239F42C00058D80A /* AppDelegate.h */,
-				7F974490239F42C00058D80A /* AppDelegate.m */,
-				7F974492239F42C00058D80A /* SceneDelegate.h */,
-				7F974493239F42C00058D80A /* SceneDelegate.m */,
 				7F97449B239F42C20058D80A /* Assets.xcassets */,
-				7F97449D239F42C20058D80A /* LaunchScreen.storyboard */,
-				7F9744C4239F70630058D80A /* PhoneViewController.h */,
-				7F9744C5239F70630058D80A /* PhoneViewController.m */,
-				7F9744C7239F709E0058D80A /* PersonViewController.h */,
-				7F9744D0239FA0D10058D80A /* PersonDetailsViewController.h */,
-				7F9744D1239FA0D10058D80A /* PersonDetailsViewController.m */,
-				7F9744C8239F709E0058D80A /* PersonViewController.m */,
-				7F9744CA239F70FD0058D80A /* CollectionsViewController.h */,
-				7F9744CB239F70FD0058D80A /* CollectionsViewController.m */,
-				7F9744CD239F71130058D80A /* GroupViewController.h */,
-				7F9744CE239F71130058D80A /* GroupViewController.m */,
-				7F9744A0239F42C20058D80A /* Info.plist */,
-				7F9744A1239F42C20058D80A /* main.m */,
 				B53AAE3C3D8642DC154AACF4 /* ContactModel */,
-				7FDE2D8B23A3334400D2B0DC /* JHTableViewCell.h */,
-				7FDE2D8C23A3334400D2B0DC /* JHTableViewCell.m */,
+				B53AA23814EF87D6AE141065 /* Phone */,
+				B53AAC0058AF01F8327CB21E /* Person */,
+				B53AA8E9138A685660FCFD1B /* Group */,
+				B53AA68BA5BF800B78DF424A /* Collections */,
+				B53AA1976FB55F96486AB5A1 /* Common */,
+				B53AA322071A1593666D35DF /* Support */,
+				B53AAE0BE008B9B98D207E02 /* Info.plist */,
 			);
 			path = JHContactTrue;
 			sourceTree = "<group>";
@@ -164,6 +152,66 @@
 				7F9744B8239F42C20058D80A /* Info.plist */,
 			);
 			path = JHContactTrueUITests;
+			sourceTree = "<group>";
+		};
+		B53AA1976FB55F96486AB5A1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B53AAA4E94989C4FEE3B8C5C /* JHTableViewCell.m */,
+				B53AA9545954D9248DE8E9A2 /* JHTableViewCell.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B53AA23814EF87D6AE141065 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				B53AA7B3655D05E4490916BA /* PhoneViewController.m */,
+				B53AA3AF8629DCE03AF36115 /* PhoneViewController.h */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		B53AA322071A1593666D35DF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B53AA52B241E166A3F0B8000 /* AppDelegate.h */,
+				B53AA98FE12ACF035F64B50F /* LaunchScreen.storyboard */,
+				B53AAF6FEE13E7AC347614BE /* AppDelegate.m */,
+				B53AA65909EC27A71916A57F /* main.m */,
+				B53AAD1975747ED75916041F /* SceneDelegate.h */,
+				B53AA7A6D57C67206A69A318 /* SceneDelegate.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B53AA68BA5BF800B78DF424A /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B53AAF1ADDB08403339452AB /* CollectionsViewController.h */,
+				B53AA487FA7432E3E801FC4D /* CollectionsViewController.m */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		B53AA8E9138A685660FCFD1B /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				B53AA1708F681835B64A4934 /* GroupViewController.m */,
+				B53AA6F9A97AE3EDA41945AD /* GroupViewController.h */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		B53AAC0058AF01F8327CB21E /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B53AA32354B38B1580060FA6 /* PersonDetailsViewController.h */,
+				B53AA6730E79002943E22709 /* PersonDetailsViewController.m */,
+				B53AA3A633D9E6AFE4C8333F /* PersonViewController.m */,
+				B53AA142C60833C7F0853C0C /* PersonViewController.h */,
+			);
+			path = Person;
 			sourceTree = "<group>";
 		};
 		B53AAE3C3D8642DC154AACF4 /* ContactModel */ = {
@@ -280,8 +328,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F97449F239F42C20058D80A /* LaunchScreen.storyboard in Resources */,
 				7F97449C239F42C20058D80A /* Assets.xcassets in Resources */,
+				B53AA9831C11810B8B1BE6F9 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,17 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9744CC239F70FD0058D80A /* CollectionsViewController.m in Sources */,
-				7F974491239F42C00058D80A /* AppDelegate.m in Sources */,
-				7F9744A2239F42C20058D80A /* main.m in Sources */,
-				7F9744CF239F71130058D80A /* GroupViewController.m in Sources */,
-				7F9744D2239FA0D10058D80A /* PersonDetailsViewController.m in Sources */,
-				7F974494239F42C00058D80A /* SceneDelegate.m in Sources */,
-				7F9744C6239F70630058D80A /* PhoneViewController.m in Sources */,
-				7F9744C9239F709E0058D80A /* PersonViewController.m in Sources */,
-				7FDE2D8D23A3334400D2B0DC /* JHTableViewCell.m in Sources */,
 				B53AA05B6B8722D6856466A3 /* JHPersonModel.m in Sources */,
 				B53AA98CF3C21700B24905C3 /* JHContactManager.m in Sources */,
+				B53AA40F3A381F098089D773 /* CollectionsViewController.m in Sources */,
+				B53AA214684910612624BA66 /* GroupViewController.m in Sources */,
+				B53AAF9877ED23092431E8FB /* PersonDetailsViewController.m in Sources */,
+				B53AA235038A27BA746B6DEA /* PersonViewController.m in Sources */,
+				B53AAC230520DAD07C08CAC6 /* PhoneViewController.m in Sources */,
+				B53AAF653EFB264EBC70EFDA /* JHTableViewCell.m in Sources */,
+				B53AAD9D0C7B2DC22452AE53 /* AppDelegate.m in Sources */,
+				B53AA1D60148FB532920DAF3 /* main.m in Sources */,
+				B53AAD83F896A23B2DE3FC1A /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,17 +398,6 @@
 			targetProxy = 7F9744B3239F42C20058D80A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7F97449D239F42C20058D80A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7F97449E239F42C20058D80A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7F9744B9239F42C20058D80A /* Debug */ = {

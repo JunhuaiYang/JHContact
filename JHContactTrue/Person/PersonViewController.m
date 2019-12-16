@@ -17,6 +17,8 @@
 @property(nonatomic, strong) NSArray<NSArray * > *sortedPersons;
 @property(nonatomic, strong) NSArray *sectionTitles;
 @property(nonatomic, strong) UILabel *infoText;
+@property(nonatomic, strong) PersonDetailsViewController *personDetailsViewController;
+
 @end
 
 @implementation PersonViewController
@@ -35,6 +37,8 @@
     self.infoText.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 3);
     self.infoText.textAlignment = NSTextAlignmentCenter;  // 文字居中效果
     [self.view addSubview:self.infoText];
+    // 创建下一级视图
+     _personDetailsViewController = [[PersonDetailsViewController alloc] init];
 
     // 在通知中心注册  当通讯录改变的时候再刷新通讯录
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:CNContactStoreDidChangeNotification object:nil];
@@ -173,7 +177,7 @@
     return [JHTableViewCell getCellHeight:JHTableViewCellStylMain];
 }
 
-// 数据刷新
+// 数据刷新  获取数据
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *str = @"Cell";
     JHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
@@ -190,9 +194,10 @@
 
 // 选中时
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] init];
+    // 防止重复创建  重用一个 view
+    _personDetailsViewController.personModel = self.sortedPersons[indexPath.section][indexPath.row];
     // 推入下一级窗口
-    [self.navigationController pushViewController:personDetailsViewController animated:YES];
+    [self.navigationController pushViewController:_personDetailsViewController animated:YES];
 }
 
 

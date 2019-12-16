@@ -19,12 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(200, 200, 160, 40)];
-    label.text = @"test";
-    [self.view addSubview:label];
-    self.view.backgroundColor = [UIColor systemPurpleColor];
     // 可以隐藏 tabar
     self.tabBarController.tabBar.hidden = YES;
+
+    // 设置预估高度
+    self.tableView.estimatedRowHeight = 150;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

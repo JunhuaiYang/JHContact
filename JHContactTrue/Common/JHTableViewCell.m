@@ -86,25 +86,32 @@
                 // 对姓名标签赋值
                 if (self.personModel.fullName != nil) {
                     self.nameLabel.text = self.personModel.fullName;
-                    self.nameLabel.frame = CGRectMake(65, 10, 160, 40);
+                    self.nameLabel.frame = CGRectMake(65, 20, 160, 40);
                     self.nameLabel.textColor = [UIColor blackColor];
                     self.nameLabel.font = [UIFont systemFontOfSize:18];
-                } else {
+                } else {  // 没有姓名用电话代替
                     if (self.personModel.phones.count)
                         self.nameLabel.text = self.personModel.phones[0].value;
                     else
                         self.nameLabel.text = @"无姓名";
-                    self.nameLabel.frame = CGRectMake(65, 10, 160, 40);
+                    self.nameLabel.frame = CGRectMake(65, 20, 160, 40);
                     self.nameLabel.textColor = [UIColor systemGrayColor];
                     self.nameLabel.font = [UIFont systemFontOfSize:16];
                 }
+                [self.nameLabel sizeToFit];  // 自适应大小
+//                NSLog(@"name:%@   :  %@", _personModel.fullName, self.nameLabel.frame);
 
                 // 看是否有昵称
-                if (self.personModel.nickName != nil) {
-                    self.nicknameLabel.frame = CGRectMake(170, 10, 160, 40);
-                    self.nicknameLabel.text = self.personModel.nickName;
+                if (self.personModel.nickName.length != 0) {
+//                    [self.nicknameLabel addConstraint:[NSLayoutConstraint constraintWithItem:self.nameLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.nicknameLabel attribute:NSLayoutAttributeLeft multiplier:1 constant:20]];
+                    // 计算布局
+                    self.nicknameLabel.frame = CGRectMake( self.nameLabel.frame.origin.x + self.nameLabel.frame.size.width + 15, 20, 160, 40);
+                    self.nicknameLabel.text = [NSString stringWithFormat:@"(%@)", self.personModel.nickName];
                     self.nicknameLabel.textColor = [UIColor systemGray2Color];
                     self.nicknameLabel.font = [UIFont systemFontOfSize:18];
+                    [self.nicknameLabel sizeToFit];  // 自适应
+                } else{
+                    self.nicknameLabel.text = @"";  // 防止重用单元格时的问题
                 }
                 break;
 
