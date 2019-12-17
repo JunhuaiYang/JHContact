@@ -50,8 +50,8 @@
         [self.contentView addSubview:self.nicknameLabel];
 
         if (style == JHTableViewCellStyleDetail) {
-            self.number = [[UILabel alloc] init];
-            [self.contentView addSubview:self.number];
+            self.numberLabel = [[UILabel alloc] init];
+            [self.contentView addSubview:self.numberLabel];
         }
     }
 
@@ -99,7 +99,7 @@
                     self.nameLabel.font = [UIFont systemFontOfSize:16];
                 }
                 [self.nameLabel sizeToFit];  // 自适应大小
-//                NSLog(@"name:%@   :  %@", _personModel.fullName, self.nameLabel.frame);
+//                NSLog(@"nameLabel:%@   :  %@", _personModel.fullName, self.nameLabel.frame);
 
                 // 看是否有昵称
                 if (self.personModel.nickName.length != 0) {
@@ -115,8 +115,37 @@
                 }
                 break;
 
+            // 显示号码的格式
             case JHTableViewCellStyleDetail:
-                /* code */
+                _imageView.image = self.image;
+                _imageView.frame = CGRectMake(10, 10, 60, 60);
+                // 将头像裁剪成圆形
+                _imageView.layer.cornerRadius = _imageView.frame.size.width / 2;  // 设置圆形半径
+                _imageView.layer.masksToBounds = YES;  //隐藏裁掉的部分
+                // 加一个圆形边框
+                _imageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+                _imageView.layer.borderWidth = 1.0f;
+                // 可以改变图片颜色
+                _imageView.tintColor = [UIColor grayColor];
+
+                // 对姓名标签赋值
+                if (self.personModel.fullName != nil) {
+                    self.nameLabel.text = self.personModel.fullName;
+                    self.nameLabel.frame = CGRectMake(80, 10, 160, 40);
+                    self.nameLabel.textColor = [UIColor blackColor];
+                    self.nameLabel.font = [UIFont systemFontOfSize:16];
+                }
+
+                // 手机号副标题
+                if (self.personModel.phones.count){
+                    self.numberLabel.text = [NSString stringWithFormat:@"%4@%@",self.personModel.phones[0].type, self.personModel.phones[0].value];
+                    self.numberLabel.frame = CGRectMake(10, 40, 200, 30);
+                    self.numberLabel.textColor = [UIColor grayColor];
+                    self.numberLabel.font = [UIFont systemFontOfSize:14];
+                } else{
+                    self.numberLabel.text = @"";
+                }
+
                 break;
 
             default:

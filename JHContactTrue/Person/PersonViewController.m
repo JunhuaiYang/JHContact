@@ -37,8 +37,10 @@
     self.infoText.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 3);
     self.infoText.textAlignment = NSTextAlignmentCenter;  // 文字居中效果
     [self.view addSubview:self.infoText];
+    //调整两个cell之间的分割线的长度
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 60, 0, 20);
     // 创建下一级视图
-     _personDetailsViewController = [[PersonDetailsViewController alloc] init];
+     _personDetailsViewController = [[PersonDetailsViewController alloc] initWithStyle:UITableViewStyleInsetGrouped];
 
     // 在通知中心注册  当通讯录改变的时候再刷新通讯录
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:CNContactStoreDidChangeNotification object:nil];
@@ -152,7 +154,7 @@
     return self.sortedPersons.count;
 }
 
-// 返回每组的列数 section是组数
+// 返回每组的行数 section是组数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.sortedPersons[(NSUInteger) section].count;
 }

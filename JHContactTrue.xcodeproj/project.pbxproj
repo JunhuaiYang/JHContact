@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F650AF523A76AA70086F22B /* PersonDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F650AF423A76AA70086F22B /* PersonDetailsTableViewCell.m */; };
 		7F97449C239F42C20058D80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F97449B239F42C20058D80A /* Assets.xcassets */; };
 		7F9744AC239F42C20058D80A /* JHContactTrueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744AB239F42C20058D80A /* JHContactTrueTests.m */; };
 		7F9744B7239F42C20058D80A /* JHContactTrueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744B6239F42C20058D80A /* JHContactTrueUITests.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F650AF323A76AA70086F22B /* PersonDetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDetailsTableViewCell.h; sourceTree = "<group>"; };
+		7F650AF423A76AA70086F22B /* PersonDetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsTableViewCell.m; sourceTree = "<group>"; };
 		7F97448C239F42C00058D80A /* JHContactTrue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHContactTrue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F97449B239F42C20058D80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F9744A7239F42C20058D80A /* JHContactTrueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHContactTrueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				7F97449B239F42C20058D80A /* Assets.xcassets */,
-				B53AAE3C3D8642DC154AACF4 /* ContactModel */,
+				B53AAE3C3D8642DC154AACF4 /* PersonModel */,
 				B53AA23814EF87D6AE141065 /* Phone */,
 				B53AAC0058AF01F8327CB21E /* Person */,
 				B53AA8E9138A685660FCFD1B /* Group */,
@@ -210,11 +213,13 @@
 				B53AA6730E79002943E22709 /* PersonDetailsViewController.m */,
 				B53AA3A633D9E6AFE4C8333F /* PersonViewController.m */,
 				B53AA142C60833C7F0853C0C /* PersonViewController.h */,
+				7F650AF323A76AA70086F22B /* PersonDetailsTableViewCell.h */,
+				7F650AF423A76AA70086F22B /* PersonDetailsTableViewCell.m */,
 			);
 			path = Person;
 			sourceTree = "<group>";
 		};
-		B53AAE3C3D8642DC154AACF4 /* ContactModel */ = {
+		B53AAE3C3D8642DC154AACF4 /* PersonModel */ = {
 			isa = PBXGroup;
 			children = (
 				B53AA83BD88B1345A3AEA5CC /* JHPersonModel.m */,
@@ -222,7 +227,7 @@
 				B53AA709F1C82100A03B925D /* JHContactManager.m */,
 				B53AAE9D8166628E44096E7E /* JHContactManager.h */,
 			);
-			path = ContactModel;
+			path = PersonModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +370,7 @@
 				B53AAD9D0C7B2DC22452AE53 /* AppDelegate.m in Sources */,
 				B53AA1D60148FB532920DAF3 /* main.m in Sources */,
 				B53AAD83F896A23B2DE3FC1A /* SceneDelegate.m in Sources */,
+				7F650AF523A76AA70086F22B /* PersonDetailsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

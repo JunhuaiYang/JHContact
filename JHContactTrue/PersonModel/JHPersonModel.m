@@ -36,7 +36,10 @@
         self.familyName = contact.familyName;
         self.nickName = contact.nickname;
 
-//        NSLog(@"%@ : %@ : %@", self.fullName, self.givenName, self.familyName);
+        // 生日
+        self.birthday = [contact.birthday date];
+
+//        NSLog(@"%@ : %@ : %@", self.fullName, self.givenNameLabel, self.familyNameLabel);
 
         // 获取电话号码
         NSArray *phones = contact.phoneNumbers;
@@ -55,7 +58,7 @@
         NSMutableArray *emailValue = [[NSMutableArray alloc] init];
         for (CNLabeledValue *labelValue in email) {
 //            NSLog(@"%@ %@ ", labelValue.value, labelValue.label);
-            JHValue *value = [JHValue valueWithValue:labelValue.value type:labelValue.label];
+            JHValue *value = [JHValue valueWithValue:labelValue.value type:[self getTypes:labelValue.label]];
             [emailValue addObject:value];
         }
         self.emails = [emailValue copy];

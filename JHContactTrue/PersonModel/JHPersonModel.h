@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSString *familyName;
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *note;
-@property (nonatomic, strong) NSData *birthday;
+@property (nonatomic, strong) NSDate *birthday;
 // 联系方式
 @property (nonatomic, copy) NSArray<JHValue*> *phones;
 @property (nonatomic, copy) NSArray<JHValue*> *emails;

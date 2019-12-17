@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, JHTableViewCellStyle) {
 @interface JHTableViewCell : UITableViewCell
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *nicknameLabel;
-@property (nonatomic, strong) UILabel *number;
+@property (nonatomic, strong) UILabel *numberLabel;
 @property (nonatomic, strong) UIImage *image;
 
 @property (nonatomic) JHPersonModel *personModel;
