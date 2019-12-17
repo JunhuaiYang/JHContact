@@ -11,14 +11,16 @@
 #import "PersonDetailsViewController.h"
 #import "JHContactManager.h"
 #import "JHTableViewCell.h"
+#import "PersonSearchTableViewController.h"
 
-@interface PersonViewController () <CNContactPickerDelegate>
+@interface PersonViewController () <CNContactPickerDelegate, UISearchResultsUpdating>
 @property(nonatomic, strong) NSArray<JHPersonModel * > *persons;
 @property(nonatomic, strong) NSArray<NSArray * > *sortedPersons;
 @property(nonatomic, strong) NSArray *sectionTitles;
 @property(nonatomic, strong) UILabel *infoText;
 @property(nonatomic, strong) PersonDetailsViewController *personDetailsViewController;
-
+@property(nonatomic, strong) UILabel *footLabel;
+@property (nonatomic, strong) UISearchController *searchController;
 @end
 
 @implementation PersonViewController
@@ -28,6 +30,13 @@
     // Do any additional setup after loading the view.
     UIBarButtonItem *barButtonItemAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonAddPress)];
     self.navigationItem.rightBarButtonItem = barButtonItemAdd;
+
+    // 新建 searchBar
+    PersonSearchTableViewController *searchTableViewController = [[PersonSearchTableViewController alloc] init];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchTableViewController];
+    self.searchController.searchResultsUpdater = searchTableViewController;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+
 
     // 如果没有取得权限则显示该标签
     self.infoText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 80)];
@@ -42,6 +51,12 @@
     // 创建下一级视图
      _personDetailsViewController = [[PersonDetailsViewController alloc] initWithStyle:UITableViewStyleInsetGrouped];
 
+     // 页脚
+     self.footLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+     self.footLabel.textAlignment = NSTextAlignmentCenter;
+     self.footLabel.textColor = [UIColor systemGray4Color];
+     self.tableView.tableFooterView = self.footLabel;
+
     // 在通知中心注册  当通讯录改变的时候再刷新通讯录
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:CNContactStoreDidChangeNotification object:nil];
 
@@ -50,13 +65,18 @@
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [self refresh];
-        NSLog(@"任务  %@", [NSThread currentThread]);
+//        NSLog(@"任务  %@", [NSThread currentThread]);
     });
 
     // 添加一个 KVO  改成回调
 //    [self addObserver:[JHContactManager sharedInstance] forKeyPath:authorized options:NSKeyValueObservingOptionNew context:@selector(refresh)];
 }
 
+
+// 销毁时释放通知中心
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CNContactStoreDidChangeNotification object:nil];
+}
 
 // 把数据刷新放到将要显示中来做 x
 // 改为通知刷新
@@ -72,6 +92,8 @@
         [self sortPerson];
         // 填充数据
         [self.tableView reloadData];
+        // 刷新页脚
+        self.footLabel.text = [NSString stringWithFormat:@"共有%lu位联系人", _persons.count];
     }
 }
 
@@ -112,7 +134,7 @@
         // 尝试获得授权
         [contactManager requestContactAuthorization:^{
             // 应该把它加到主队列里来完成
-            // 不能再主队列任务同步  会发生死锁   为什么没有发生？？
+            // 不能再主队列任务同步  会发生死锁   为什么没有发生？？  —— 运行时处于不同线程中
 //            dispatch_sync(dispatch_get_main_queue(), ^{
 //                [self refresh];
 //            });
@@ -139,9 +161,9 @@
     }
     return YES;
 }
-
+// 点击添加按钮
 - (void)buttonAddPress {
-    PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] init];
+//    PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] init];
     // 推入下一级窗口
 //    [self.navigationController pushViewController:personDetailsViewController animated:YES];
 }
@@ -203,14 +225,5 @@
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

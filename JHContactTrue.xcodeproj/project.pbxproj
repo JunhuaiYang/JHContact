@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F650AF523A76AA70086F22B /* PersonDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F650AF423A76AA70086F22B /* PersonDetailsTableViewCell.m */; };
+		7F650AFB23A8AD900086F22B /* PersonSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F650AFA23A8AD900086F22B /* PersonSearchTableViewController.m */; };
 		7F97449C239F42C20058D80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F97449B239F42C20058D80A /* Assets.xcassets */; };
 		7F9744AC239F42C20058D80A /* JHContactTrueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744AB239F42C20058D80A /* JHContactTrueTests.m */; };
 		7F9744B7239F42C20058D80A /* JHContactTrueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9744B6239F42C20058D80A /* JHContactTrueUITests.m */; };
@@ -16,6 +17,7 @@
 		B53AA214684910612624BA66 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA1708F681835B64A4934 /* GroupViewController.m */; };
 		B53AA235038A27BA746B6DEA /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA3A633D9E6AFE4C8333F /* PersonViewController.m */; };
 		B53AA40F3A381F098089D773 /* CollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA487FA7432E3E801FC4D /* CollectionsViewController.m */; };
+		B53AA88F293CC420DCBF7395 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA381D240B3DE551E021E /* ChineseToPinyin.m */; };
 		B53AA9831C11810B8B1BE6F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53AA98FE12ACF035F64B50F /* LaunchScreen.storyboard */; };
 		B53AA98CF3C21700B24905C3 /* JHContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA709F1C82100A03B925D /* JHContactManager.m */; };
 		B53AAC230520DAD07C08CAC6 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53AA7B3655D05E4490916BA /* PhoneViewController.m */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		7F650AF323A76AA70086F22B /* PersonDetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDetailsTableViewCell.h; sourceTree = "<group>"; };
 		7F650AF423A76AA70086F22B /* PersonDetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsTableViewCell.m; sourceTree = "<group>"; };
+		7F650AF923A8AD900086F22B /* PersonSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSearchTableViewController.h; sourceTree = "<group>"; };
+		7F650AFA23A8AD900086F22B /* PersonSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSearchTableViewController.m; sourceTree = "<group>"; };
 		7F97448C239F42C00058D80A /* JHContactTrue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHContactTrue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F97449B239F42C20058D80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F9744A7239F42C20058D80A /* JHContactTrueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHContactTrueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,7 @@
 		B53AA142C60833C7F0853C0C /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		B53AA1708F681835B64A4934 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		B53AA32354B38B1580060FA6 /* PersonDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailsViewController.h; sourceTree = "<group>"; };
+		B53AA381D240B3DE551E021E /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
 		B53AA3A633D9E6AFE4C8333F /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		B53AA3AF8629DCE03AF36115 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
 		B53AA487FA7432E3E801FC4D /* CollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionsViewController.m; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 		B53AA9545954D9248DE8E9A2 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
 		B53AA98FE12ACF035F64B50F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53AAA4E94989C4FEE3B8C5C /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
+		B53AAC2CC67129100281B6BD /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
 		B53AAD1975747ED75916041F /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		B53AAE0BE008B9B98D207E02 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B53AAE78222BFF239C30F2E9 /* JHPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPersonModel.h; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 				B53AA1976FB55F96486AB5A1 /* Common */,
 				B53AA322071A1593666D35DF /* Support */,
 				B53AAE0BE008B9B98D207E02 /* Info.plist */,
+				B53AABC80E5D0D24C5D1A8C1 /* PinYin */,
 			);
 			path = JHContactTrue;
 			sourceTree = "<group>";
@@ -206,6 +213,15 @@
 			path = Group;
 			sourceTree = "<group>";
 		};
+		B53AABC80E5D0D24C5D1A8C1 /* PinYin */ = {
+			isa = PBXGroup;
+			children = (
+				B53AAC2CC67129100281B6BD /* ChineseToPinyin.h */,
+				B53AA381D240B3DE551E021E /* ChineseToPinyin.m */,
+			);
+			path = PinYin;
+			sourceTree = "<group>";
+		};
 		B53AAC0058AF01F8327CB21E /* Person */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +231,8 @@
 				B53AA142C60833C7F0853C0C /* PersonViewController.h */,
 				7F650AF323A76AA70086F22B /* PersonDetailsTableViewCell.h */,
 				7F650AF423A76AA70086F22B /* PersonDetailsTableViewCell.m */,
+				7F650AF923A8AD900086F22B /* PersonSearchTableViewController.h */,
+				7F650AFA23A8AD900086F22B /* PersonSearchTableViewController.m */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -366,11 +384,13 @@
 				B53AAF9877ED23092431E8FB /* PersonDetailsViewController.m in Sources */,
 				B53AA235038A27BA746B6DEA /* PersonViewController.m in Sources */,
 				B53AAC230520DAD07C08CAC6 /* PhoneViewController.m in Sources */,
+				7F650AFB23A8AD900086F22B /* PersonSearchTableViewController.m in Sources */,
 				B53AAF653EFB264EBC70EFDA /* JHTableViewCell.m in Sources */,
 				B53AAD9D0C7B2DC22452AE53 /* AppDelegate.m in Sources */,
 				B53AA1D60148FB532920DAF3 /* main.m in Sources */,
 				B53AAD83F896A23B2DE3FC1A /* SceneDelegate.m in Sources */,
 				7F650AF523A76AA70086F22B /* PersonDetailsTableViewCell.m in Sources */,
+				B53AA88F293CC420DCBF7395 /* ChineseToPinyin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

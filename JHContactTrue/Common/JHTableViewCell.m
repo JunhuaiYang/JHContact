@@ -131,15 +131,15 @@
                 // 对姓名标签赋值
                 if (self.personModel.fullName != nil) {
                     self.nameLabel.text = self.personModel.fullName;
-                    self.nameLabel.frame = CGRectMake(80, 10, 160, 40);
+                    self.nameLabel.frame = CGRectMake(80, 10, 160, 30);
                     self.nameLabel.textColor = [UIColor blackColor];
-                    self.nameLabel.font = [UIFont systemFontOfSize:16];
+                    self.nameLabel.font = [UIFont systemFontOfSize:18];
                 }
 
                 // 手机号副标题
                 if (self.personModel.phones.count){
-                    self.numberLabel.text = [NSString stringWithFormat:@"%4@%@",self.personModel.phones[0].type, self.personModel.phones[0].value];
-                    self.numberLabel.frame = CGRectMake(10, 40, 200, 30);
+                    self.numberLabel.text = [NSString stringWithFormat:@"%@  %@",self.personModel.phones[0].type, self.personModel.phones[0].value];
+                    self.numberLabel.frame = CGRectMake(80, 40, 200, 30);
                     self.numberLabel.textColor = [UIColor grayColor];
                     self.numberLabel.font = [UIFont systemFontOfSize:14];
                 } else{

@@ -23,6 +23,9 @@
 // 图片
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UIImage *smallImage;
+// 加入拼音
+@property (nonatomic, copy) NSString *py;
+@property (nonatomic, copy) NSString *pinyin;
 
 - (instancetype)initWithFullName:(NSString *)fullName;
 

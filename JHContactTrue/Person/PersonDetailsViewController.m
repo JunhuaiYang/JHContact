@@ -54,7 +54,7 @@
 //    self.tableView.rowHeight = UITableViewAutomaticDimension;
     // 不显示多余的 cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;  // 编辑按钮
 }
 
 - (void)viewWillAppear:(BOOL)animated {

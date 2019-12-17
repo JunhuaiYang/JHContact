@@ -4,7 +4,7 @@
 //
 
 #import "JHPersonModel.h"
-
+#import "ChineseToPinyin.h"
 
 @implementation JHPersonModel {
 
@@ -35,6 +35,13 @@
         self.givenName = contact.givenName;
         self.familyName = contact.familyName;
         self.nickName = contact.nickname;
+
+        // 获得全名的拼音
+        if (self.fullName.length != 0){
+            self.py = [ChineseToPinyin letterPinyinFromChineseString:self.fullName];
+            self.pinyin = [ChineseToPinyin pinyinFromChineseString:self.fullName withSpace:NO];
+        }
+        NSLog(@"%@:%@:%@", _fullName, _py, _pinyin);
 
         // 生日
         self.birthday = [contact.birthday date];
@@ -91,7 +98,6 @@
             CNLabelPhoneNumberHomeFax: @"家用传真", CNLabelPhoneNumberWorkFax: @"工作传真",};
     return tagDic[tag] ? tagDic[tag] : @"其他";
 }
-
 @end
 
 
