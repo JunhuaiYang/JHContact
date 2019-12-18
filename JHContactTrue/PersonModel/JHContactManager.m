@@ -4,14 +4,13 @@
 //
 
 #import "JHContactManager.h"
+#import <ContactsUI/ContactsUI.h>
 
-@interface JHContactManager ()
-@property(nonatomic, copy) NSArray *fetchKeys;
-@end
+NSString * const JHPersonsDidChangeNotification = @"JHPersonsDidChangeNotification";
 
 @implementation JHContactManager {
     CNContactStore *_store;
-    NSMutableArray<JHPersonModel * > *_persons;
+    NSMutableArray<JHPersonModel * > *_mutablePersons;
 }
 
 /**
@@ -22,7 +21,8 @@
     if (!_fetchKeys) {
         _fetchKeys = @[[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName],   // 这个可以自动生成姓名格式
                 CNContactGivenNameKey, CNContactFamilyNameKey, CNContactNicknameKey, CNContactPhoneNumbersKey,
-                CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey, CNContactThumbnailImageDataKey];
+                CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey, CNContactThumbnailImageDataKey,
+                CNContactViewController.descriptorForRequiredKeys];
     }
     return _fetchKeys;
 }
@@ -32,10 +32,17 @@
     self = [super init];
     if (self) {
         _store = [[CNContactStore alloc] init];
-        _persons = [[NSMutableArray alloc] init];
+        _mutablePersons = [[NSMutableArray alloc] init];
+        // 在通知中心注册
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getAllPerson) name:CNContactStoreDidChangeNotification object:nil];
+
     }
 
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CNContactStoreDidChangeNotification object:nil];
 }
 
 
@@ -80,18 +87,24 @@
     // 创建请求对象
     CNContactFetchRequest *request = [[CNContactFetchRequest alloc] initWithKeysToFetch:self.fetchKeys];
     // 应该移除所有子数组
-    [_persons removeAllObjects];
+    [_mutablePersons removeAllObjects];
     // 请求
     NSError *error = nil;
     [_store enumerateContactsWithFetchRequest:request error:&error usingBlock:^(CNContact *contact, BOOL *stop) {
         // stop是决定是否要停止
         JHPersonModel *personModel = [JHPersonModel modelWithContact:contact];
-        [_persons addObject:personModel];
+        [_mutablePersons addObject:personModel];
     }];
+    if (error == nil){
+        NSLog(@"成功更新联系人");
+        // 在通知中心注册改变
+        _persons = [_mutablePersons copy];
+        [[NSNotificationCenter defaultCenter] postNotificationName:JHPersonsDidChangeNotification object:nil]; // 慢慢通知
+    }
 //    NSLog(@"%@", error);
 }
 
-- (NSArray<JHPersonModel *> *)getPersons {
+- (NSArray<JHPersonModel *> *)persons {
     // 未获授权时
 //    if (![self isAuthorized])
 //    {
@@ -100,10 +113,12 @@
 //            return nil;
 //        }
 //    }
-    [self getAllPerson];
-    NSLog(@"成功获取联系人");
+    // 改成直接从本地获取
+    if (_persons.count == 0){
+        [self getAllPerson];
+    }
     // 返回不可改变的对象
-    return [_persons copy];
+    return _persons;
 }
 
 

@@ -13,7 +13,7 @@
 #import "JHTableViewCell.h"
 #import "PersonSearchTableViewController.h"
 
-@interface PersonViewController () <CNContactPickerDelegate, UISearchResultsUpdating>
+@interface PersonViewController () < CNContactViewControllerDelegate>
 @property(nonatomic, strong) NSArray<JHPersonModel * > *persons;
 @property(nonatomic, strong) NSArray<NSArray * > *sortedPersons;
 @property(nonatomic, strong) NSArray *sectionTitles;
@@ -31,14 +31,32 @@
     UIBarButtonItem *barButtonItemAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonAddPress)];
     self.navigationItem.rightBarButtonItem = barButtonItemAdd;
 
+//    self.navigationController.navigationBar.translucent = NO;
     // 新建 searchBar
-    PersonSearchTableViewController *searchTableViewController = [[PersonSearchTableViewController alloc] init];
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchTableViewController];
+    PersonSearchTableViewController *searchTableViewController = [[PersonSearchTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    // 应该把这个视图转变为 navigation
+    UINavigationController *searchNavigation = [[UINavigationController alloc] initWithRootViewController:searchTableViewController];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchNavigation];
     self.searchController.searchResultsUpdater = searchTableViewController;
+    self.searchController.searchBar.placeholder = @"搜索";
+    self.searchController.searchBar.autocorrectionType = UITextAutocorrectionTypeNo; // 关闭提示
+    self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone; // 关闭首字母大写
+//    self.searchController.hidesNavigationBarDuringPresentation = NO;   // 隐藏导航栏
+//    self.searchController.searchBar.translucent = NO;   // 设置透明
+//    searchNavigation.navigationBar.translucent = NO;
+
+//    [self.searchController.searchBar sizeToFit];
+    self.searchController.definesPresentationContext = YES;   // 可以被覆盖
+    self.definesPresentationContext = YES;
+    searchNavigation.definesPresentationContext = YES;
+    self.definesPresentationContext = YES;
+//    self.extendedLayoutIncludesOpaqueBars = YES;
+
+    // 将搜索栏添加
     self.tableView.tableHeaderView = self.searchController.searchBar;
 
 
-    // 如果没有取得权限则显示该标签
+    // 如果没有取得权限则显示该标签  标签显示
     self.infoText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 80)];
     self.infoText.text = @"没有获得通讯录权限";
     self.infoText.font = [UIFont systemFontOfSize:20];
@@ -52,13 +70,13 @@
      _personDetailsViewController = [[PersonDetailsViewController alloc] initWithStyle:UITableViewStyleInsetGrouped];
 
      // 页脚
-     self.footLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+     self.footLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
      self.footLabel.textAlignment = NSTextAlignmentCenter;
      self.footLabel.textColor = [UIColor systemGray4Color];
      self.tableView.tableFooterView = self.footLabel;
 
-    // 在通知中心注册  当通讯录改变的时候再刷新通讯录
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:CNContactStoreDidChangeNotification object:nil];
+    // 在通知中心注册  当通讯录改变的时候再刷新通讯录  -- 改为 JHContactM 的
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:JHPersonsDidChangeNotification object:nil];
 
     // 初始时只刷新一次
 //    [self refresh];
@@ -75,8 +93,14 @@
 
 // 销毁时释放通知中心
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:CNContactStoreDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:JHPersonsDidChangeNotification object:nil];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+//    self.searchController.searchBar.hidden = YES;
+}
+
 
 // 把数据刷新放到将要显示中来做 x
 // 改为通知刷新
@@ -153,7 +177,7 @@
         return NO;
     } else {
         // 获取数据
-        self.persons = [contactManager getPersons];
+        self.persons = [contactManager persons];
         // 把表格恢复为可以滑动
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.tableView.scrollEnabled = YES;
@@ -161,11 +185,20 @@
     }
     return YES;
 }
+
 // 点击添加按钮
 - (void)buttonAddPress {
-//    PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] init];
-    // 推入下一级窗口
-//    [self.navigationController pushViewController:personDetailsViewController animated:YES];
+    CNContactViewController *contactViewController = [CNContactViewController viewControllerForNewContact:[[CNContact alloc] init]];
+    contactViewController.delegate = self;
+    [self.navigationController pushViewController:contactViewController animated:YES];
+//    [self presentViewController:contactViewController animated:YES completion:nil];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:contactViewController];
+//    [self presentViewController:nav animated:YES completion:nil];
+}
+
+// 编辑结束时推出返回
+- (void)contactViewController:(CNContactViewController *)viewController didCompleteWithContact:(nullable CNContact *)contact {
+    [viewController.navigationController popViewControllerAnimated:YES];  // 手动返回
 }
 
 

@@ -8,8 +8,10 @@
 
 #import "PersonDetailsViewController.h"
 #import "PersonDetailsTableViewCell.h"
+#import "ContactsUI/ContactsUI.h"
+#import "JHContactManager.h"
 
-@interface PersonDetailsViewController ()
+@interface PersonDetailsViewController () <CNContactViewControllerDelegate>
 @property (nonatomic, strong) PersonDetailsTableViewCell *personDetailsTableViewCell;
 @property (nonatomic, copy) NSMutableArray *data;
 @property (nonatomic, copy) NSMutableArray *tags;
@@ -54,8 +56,26 @@
 //    self.tableView.rowHeight = UITableViewAutomaticDimension;
     // 不显示多余的 cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;  // 编辑按钮
+    UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(editPressed)];
+    self.navigationItem.rightBarButtonItem = editButtonItem;  // 编辑按钮
+//    self.definesPresentationContext = YES;
+
 }
+
+- (void)editPressed {
+    CNContactViewController *contactViewController = [CNContactViewController viewControllerForContact:self.personModel.contact];
+//    contactViewController.displayedPropertyKeys  = [JHContactManager sharedInstance].fetchKeys;
+//    contactViewController.displayedPropertyKeys  = @[CNContactIdentifierKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataAvailableKey, CNContactImageDataKey, CNContactViewController.descriptorForRequiredKeys];
+    contactViewController.delegate = self;
+    contactViewController.allowsEditing = YES;
+    [self.navigationController pushViewController:contactViewController animated:YES];
+//    [self presentViewController:contactViewController animated:YES completion:nil];
+}
+
+- (void)contactViewController:(CNContactViewController *)viewController didCompleteWithContact:(nullable CNContact *)contact {
+    [viewController.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

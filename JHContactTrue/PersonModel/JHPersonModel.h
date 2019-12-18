@@ -18,14 +18,16 @@
 @property (nonatomic, copy) NSString *note;
 @property (nonatomic, strong) NSDate *birthday;
 // 联系方式
-@property (nonatomic, copy) NSArray<JHValue*> *phones;
-@property (nonatomic, copy) NSArray<JHValue*> *emails;
+@property (nonatomic, strong) NSArray<JHValue*> *phones;
+@property (nonatomic, strong) NSArray<JHValue*> *emails;
 // 图片
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UIImage *smallImage;
 // 加入拼音
 @property (nonatomic, copy) NSString *py;
 @property (nonatomic, copy) NSString *pinyin;
+// contact信息
+@property (nonatomic, strong) CNContact *contact;
 
 - (instancetype)initWithFullName:(NSString *)fullName;
 

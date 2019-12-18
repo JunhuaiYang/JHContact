@@ -25,7 +25,7 @@
     self.navigationItem.rightBarButtonItem = barButtonItemAdd;
 
     self.persons = [[NSMutableArray alloc] init];
-    self.persons = [[JHContactManager sharedInstance] getPersons];
+    self.persons = [[JHContactManager sharedInstance] persons];
 
 }
 

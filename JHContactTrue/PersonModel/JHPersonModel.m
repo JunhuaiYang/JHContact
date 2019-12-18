@@ -37,11 +37,15 @@
         self.nickName = contact.nickname;
 
         // 获得全名的拼音
-        if (self.fullName.length != 0){
+        if (self.fullName != nil || self.fullName.length != 0){
             self.py = [ChineseToPinyin letterPinyinFromChineseString:self.fullName];
             self.pinyin = [ChineseToPinyin pinyinFromChineseString:self.fullName withSpace:NO];
+        } else{
+            self.fullName = @"";
+            self.py = @"";
+            self.pinyin = @"";
         }
-        NSLog(@"%@:%@:%@", _fullName, _py, _pinyin);
+//        NSLog(@"%@:%@:%@", _fullName, _py, _pinyin);
 
         // 生日
         self.birthday = [contact.birthday date];
@@ -80,6 +84,9 @@
             self.smallImage = [UIImage imageWithData:contact.thumbnailImageData];
 //            NSLog(@"小图  %@", self.fullName);
         }
+
+        // 将当前 contact 加入
+        self.contact = contact;
 
     }
     return self;
