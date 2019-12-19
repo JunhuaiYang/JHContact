@@ -88,6 +88,9 @@
         // 将当前 contact 加入
         self.contact = contact;
 
+        //加入群组信息
+//        self.group =
+
     }
     return self;
 }

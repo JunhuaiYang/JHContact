@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PhoneViewController : UITableViewController
-
+@property(nonatomic, strong) NSArray *persons;
+@property(nonatomic, assign) NSInteger index;
 @end
 
 NS_ASSUME_NONNULL_END

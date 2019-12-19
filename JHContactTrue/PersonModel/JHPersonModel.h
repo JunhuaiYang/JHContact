@@ -28,6 +28,8 @@
 @property (nonatomic, copy) NSString *pinyin;
 // contact信息
 @property (nonatomic, strong) CNContact *contact;
+// 群组信息
+@property (nonatomic, copy) NSString *group;
 
 - (instancetype)initWithFullName:(NSString *)fullName;
 

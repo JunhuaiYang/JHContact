@@ -7,9 +7,11 @@
 //
 
 #import "GroupViewController.h"
+#import "JHContactManager.h"
+#import "PhoneViewController.h"
 
 @interface GroupViewController ()
-
+@property (nonatomic, strong) PhoneViewController *phoneViewController;
 @end
 
 @implementation GroupViewController
@@ -21,27 +23,36 @@
 //    self.tabBarItem = tabBarItem;
 }
 
+- (PhoneViewController *)phoneViewController {
+    if (_phoneViewController == nil)
+        _phoneViewController = [[PhoneViewController alloc] init];
+    return _phoneViewController;
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [JHContactManager sharedInstance].groups.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    NSString *str = @"cell";
+//    尝试获得可复用的 cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+    }
+    // Configure the cell...
+    cell.textLabel.text = [JHContactManager sharedInstance].groups[(NSUInteger) indexPath.row];
+    return cell;
 }
 
-- (NSArray<UIDragItem *> *)tableView:(UITableView *)tableView itemsForBeginningDragSession:(id <UIDragSession>)session atIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+// 选中时
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 推入一个新建的列表
+    self.phoneViewController.persons = [[[JHContactManager sharedInstance] groupPersons][(NSUInteger) indexPath.row] copy];
+    self.phoneViewController.index = indexPath.row;
+    [self.navigationController pushViewController:self.phoneViewController animated:YES];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

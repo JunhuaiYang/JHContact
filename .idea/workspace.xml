@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcuserdata/junhuai.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.xcworkspace/xcuserdata/junhuai.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/Person/PersonSearchTableViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonSearchTableViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/Person/PersonSearchTableViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonSearchTableViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/Person/PersonViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/Group/GroupViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Group/GroupViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHContactManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHContactManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHContactManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHContactManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHPersonModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHPersonModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHPersonModel.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/PersonModel/JHPersonModel.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/Phone/PhoneViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Phone/PhoneViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/Phone/PhoneViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Phone/PhoneViewController.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +78,7 @@
       <workItem from="1575948461195" duration="58145000" />
       <workItem from="1576203176530" duration="9413000" />
       <workItem from="1576221956305" duration="14018000" />
-      <workItem from="1576416962047" duration="84087000" />
+      <workItem from="1576416962047" duration="96989000" />
     </task>
     <task id="LOCAL-00001" summary="reformat code">
       <created>1576466059896</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576667880186</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="编辑联系人">
+      <created>1576722928923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576722928924</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +145,8 @@
     <MESSAGE value="次级页面完成" />
     <MESSAGE value="暂存" />
     <MESSAGE value="新增联系人，编辑联系人" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增联系人，编辑联系人" />
+    <MESSAGE value="编辑联系人" />
+    <option name="LAST_COMMIT_MESSAGE" value="编辑联系人" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="CidrCoverage/JHContactTrue/JHContactTrue.json" NAME="JHContactTrue Coverage Results" MODIFIED="1576644167033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="llvm-cov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
