@@ -41,15 +41,16 @@
     self.searchController.searchBar.placeholder = @"搜索";
     self.searchController.searchBar.autocorrectionType = UITextAutocorrectionTypeNo; // 关闭提示
     self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone; // 关闭首字母大写
-//    self.searchController.hidesNavigationBarDuringPresentation = NO;   // 隐藏导航栏
+    self.searchController.hidesNavigationBarDuringPresentation = NO;   // 隐藏导航栏
 //    self.searchController.searchBar.translucent = NO;   // 设置透明
 //    searchNavigation.navigationBar.translucent = NO;
+    // 尝试使用代理
+    self.searchController.delegate = searchTableViewController;
 
 //    [self.searchController.searchBar sizeToFit];
-    self.searchController.definesPresentationContext = YES;   // 可以被覆盖
-    self.definesPresentationContext = YES;
-    searchNavigation.definesPresentationContext = YES;
-    self.definesPresentationContext = YES;
+//    self.searchController.definesPresentationContext = YES;   // 可以被覆盖
+//    searchNavigation.definesPresentationContext = YES;
+//    self.definesPresentationContext = YES;
 //    self.extendedLayoutIncludesOpaqueBars = YES;
 
     // 将搜索栏添加
@@ -106,6 +107,8 @@
 // 改为通知刷新
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (self.searchController)
+        self.searchController.searchBar.hidden = NO;
 }
 
 - (void)refresh {

@@ -22,7 +22,7 @@ NSString * const JHPersonsDidChangeNotification = @"JHPersonsDidChangeNotificati
         _fetchKeys = @[[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName],   // 这个可以自动生成姓名格式
                 CNContactGivenNameKey, CNContactFamilyNameKey, CNContactNicknameKey, CNContactPhoneNumbersKey,
                 CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey, CNContactThumbnailImageDataKey,
-                CNContactViewController.descriptorForRequiredKeys];
+                CNContactViewController.descriptorForRequiredKeys];  // 这个用于进入系统编辑页面
     }
     return _fetchKeys;
 }

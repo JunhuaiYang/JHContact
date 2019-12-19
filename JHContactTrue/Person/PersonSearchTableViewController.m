@@ -24,6 +24,7 @@
 @interface PersonSearchTableViewController ()
 @property (nonatomic, strong) NSMutableArray<JHAttributePerson*> *searchResult;
 @property(nonatomic, strong) UILabel *footLabel;
+@property (nonatomic, weak) UISearchController *searchController;
 @end
 
 @implementation PersonSearchTableViewController
@@ -47,16 +48,26 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    CGRect temp = self.tableView.frame;
-    temp.origin.y-=200;
-    self.tableView.frame = temp;
+    if (self.searchController.searchBar)
+        self.searchController.searchBar.hidden = NO;
+//    CGRect temp = self.tableView.frame;
+//    temp.origin.y = -100;
+//    self.tableView.frame = temp;
 
+//    NSLog(@"in");
 //    self.tableView.contentOffset = CGPointMake(0, 100);
 //    self.extendedLayoutIncludesOpaqueBars = YES;
 //    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 //    self.tableView.contentInset = UIEdgeInsetsMake(-100, 0, 0, 0);
 
 }
+
+// 只能通过视图即将消失来控制 searchBar 隐藏
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.searchController.searchBar.hidden = YES;
+}
+
 
 - (NSMutableArray<JHAttributePerson *> *)searchResult {
     if (_searchResult == nil)
@@ -89,13 +100,15 @@
 // 选中时
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 防止重复创建  重用一个 view
-    PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] init];
+    PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] initWithStyle:UITableViewStyleInsetGrouped];
     personDetailsViewController.personModel = self.searchResult[indexPath.row].personModel;
     // 推入下一级窗口
     [self.navigationController pushViewController:personDetailsViewController animated:YES];
+//    [self presentViewController:personDetailsViewController animated:YES completion:nil];
 //    NSLog(@"scrollview[contentoffset:%@---frame:%@------bounds:%@",NSStringFromCGPoint(self.tableView.contentOffset), NSStringFromCGRect(self.tableView.frame),NSStringFromCGRect(self.tableView.bounds));
 
 }
+
 
 // 获取头部标题
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -112,12 +125,40 @@
     NSString *searchText = searchController.searchBar.text;
     if (searchText.length>0)
         [self searchString:searchText];
+
+//    CGRect temp = self.tableView.frame;
+//    temp.origin.y = -100;
+//    self.tableView.frame = temp;
+
 //    NSLog(@"update %@", searchText);
 //    self.tableView.bounds = CGRectMake(0, -0, 414, 600);
 //    NSLog(@"%lf %lf",self.tableView.frame.size.width, self.tableView.frame.size.height);
 
 }
 
+#pragma mark - searchbar  searchController代理
+
+// 使用代理获得 searchController
+- (void)presentSearchController:(UISearchController *)searchController {
+    self.searchController = searchController;
+//    NSLog(@"presentSearchController");
+}
+
+//- (void)didPresentSearchController:(UISearchController *)searchController {
+//    NSLog(@"didPresentSearchController");
+//}
+
+//- (void)didDismissSearchController:(UISearchController *)searchController {
+//    NSLog(@"didDismissSearchController");
+//}
+//
+//- (void)willDismissSearchController:(UISearchController *)searchController {
+//    NSLog(@"willDismissSearchController");
+//}
+//
+//- (void)willPresentSearchController:(UISearchController *)searchController {
+//    NSLog(@"willPresentSearchController");
+//}
 
 
 #pragma mark - tools
@@ -226,5 +267,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
     return [predicate evaluateWithObject:str];
 }
+
+
 
 @end
