@@ -44,6 +44,11 @@
 //    self.tableView.frame = temp;
 //    [self.tableView sizeToFit];
 //    self.definesPresentationContext = YES;
+    // 尝试自动布局
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *c1 = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeWidth
+            relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    [self.tableView addConstraint:c1];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,8 +70,14 @@
 // 只能通过视图即将消失来控制 searchBar 隐藏
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+//    self.searchController.searchBar.hidden = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     self.searchController.searchBar.hidden = YES;
 }
+
 
 
 - (NSMutableArray<JHAttributePerson *> *)searchResult {
@@ -148,12 +159,14 @@
 //    NSLog(@"didPresentSearchController");
 //}
 
-//- (void)didDismissSearchController:(UISearchController *)searchController {
-//    NSLog(@"didDismissSearchController");
-//}
+- (void)didDismissSearchController:(UISearchController *)searchController {
+    NSLog(@"didDismissSearchController");
+    searchController.searchBar.hidden = NO;
+}
 //
 //- (void)willDismissSearchController:(UISearchController *)searchController {
 //    NSLog(@"willDismissSearchController");
+//    searchController.searchBar.hidden = NO;
 //}
 //
 //- (void)willPresentSearchController:(UISearchController *)searchController {

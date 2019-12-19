@@ -21,6 +21,7 @@
     // Do any additional setup after loading the view.
 //    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:@"群组" image:[UIImage systemImageNamed:@"person.2"] tag:104];
 //    self.tabBarItem = tabBarItem;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (PhoneViewController *)phoneViewController {
@@ -43,6 +44,7 @@
     }
     // Configure the cell...
     cell.textLabel.text = [JHContactManager sharedInstance].groups[(NSUInteger) indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:20];
     return cell;
 }
 
@@ -51,6 +53,7 @@
     // 推入一个新建的列表
     self.phoneViewController.persons = [[[JHContactManager sharedInstance] groupPersons][(NSUInteger) indexPath.row] copy];
     self.phoneViewController.index = indexPath.row;
+    self.phoneViewController.title = [JHContactManager sharedInstance].groups[(NSUInteger) indexPath.row];
     [self.navigationController pushViewController:self.phoneViewController animated:YES];
 }
 
