@@ -10,6 +10,7 @@
 #import "JHContactManager.h"
 #import "ChineseToPinyin.h"
 #import "PersonDetailsViewController.h"
+#import "Masonry.h"
 
 // 新建一个结构来保存富文本信息
 @interface JHAttributePerson : NSObject
@@ -33,11 +34,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.view addSubview:self.tableView];
+
     self.footLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
     self.footLabel.textAlignment = NSTextAlignmentCenter;
     self.footLabel.textColor = [UIColor systemGray4Color];
     self.tableView.tableFooterView = self.footLabel;
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectZero];
+
+    // 在这来布局
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.top.equalTo(self.view).with.offset(-100);
+        make.bottom.equalTo(self.view).with.offset(0);
+    }];
 
     self.title = @"搜索结果";
 //    self.tableView.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -67,6 +79,8 @@
 //    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 //    self.tableView.contentInset = UIEdgeInsetsMake(-100, 0, 0, 0);
 
+
+
 }
 
 
@@ -83,7 +97,6 @@
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
 //        _tableView.bounds = rect;
-        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
