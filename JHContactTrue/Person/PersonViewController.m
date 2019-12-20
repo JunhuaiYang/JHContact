@@ -33,7 +33,7 @@
 
 //    self.navigationController.navigationBar.translucent = NO;
     // 新建 searchBar
-    PersonSearchTableViewController *searchTableViewController = [[PersonSearchTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    PersonSearchTableViewController *searchTableViewController = [[PersonSearchTableViewController alloc] init];
     // 应该把这个视图转变为 navigation
     UINavigationController *searchNavigation = [[UINavigationController alloc] initWithRootViewController:searchTableViewController];
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchNavigation];

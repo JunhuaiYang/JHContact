@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PersonSearchTableViewController : UITableViewController <UISearchResultsUpdating, UISearchControllerDelegate>
+@interface PersonSearchTableViewController : UIViewController <UISearchResultsUpdating, UISearchControllerDelegate>
 
 @end
 

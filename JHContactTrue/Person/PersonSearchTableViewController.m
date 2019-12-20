@@ -21,7 +21,9 @@
 @implementation JHAttributePerson
 @end
 
-@interface PersonSearchTableViewController ()
+@interface PersonSearchTableViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) NSMutableArray<JHAttributePerson*> *searchResult;
 @property(nonatomic, strong) UILabel *footLabel;
 @property (nonatomic, weak) UISearchController *searchController;
@@ -45,10 +47,10 @@
 //    [self.tableView sizeToFit];
 //    self.definesPresentationContext = YES;
     // 尝试自动布局
-    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *c1 = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeWidth
-            relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0];
-    [self.tableView addConstraint:c1];
+//    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+//    NSLayoutConstraint *c1 = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeWidth
+//            relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+//    [self.tableView addConstraint:c1];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,10 +69,41 @@
 
 }
 
+
+- (UITableView *)tableView {
+    if (_tableView == nil)
+    {
+        CGRect rect = self.view.frame;
+        rect.origin.y = -100;
+        rect.size.height+=100;
+        _tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.rowHeight = 50;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+//        _tableView.bounds = rect;
+        [self.view addSubview:_tableView];
+    }
+    return _tableView;
+}
+
+
 // 只能通过视图即将消失来控制 searchBar 隐藏
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 //    self.searchController.searchBar.hidden = YES;
+    // 尝试添加动画
+//    CATransition *transition = [CATransition animation];
+//    transition.duration = 0.4;
+//    transition.type = @"push";
+//    transition.subtype = kCATransitionFromRight;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+//
+//    [self.searchController.searchBar.layer addAnimation:transition forKey:nil];
+
+
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -114,7 +147,7 @@
     PersonDetailsViewController *personDetailsViewController = [[PersonDetailsViewController alloc] initWithStyle:UITableViewStyleInsetGrouped];
     personDetailsViewController.personModel = self.searchResult[indexPath.row].personModel;
     // 推入下一级窗口
-    [self.navigationController pushViewController:personDetailsViewController animated:YES];
+    [self.navigationController pushViewController:personDetailsViewController animated:NO];
 //    [self presentViewController:personDetailsViewController animated:YES completion:nil];
 //    NSLog(@"scrollview[contentoffset:%@---frame:%@------bounds:%@",NSStringFromCGPoint(self.tableView.contentOffset), NSStringFromCGRect(self.tableView.frame),NSStringFromCGRect(self.tableView.bounds));
 
