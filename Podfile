@@ -1,6 +1,5 @@
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 target 'JHContactTrue' do
-pod 'AFNetworking'
 pod 'Masonry'
 end

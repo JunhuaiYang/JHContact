@@ -1,13 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="df1afa2c-d7cc-4a49-b96a-f57634d44c3c" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Masonry/Masonry.debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Masonry/Masonry.release.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/Person/PersonSearchTableViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Person/PersonSearchTableViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JHContactTrue/Support/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/LaunchScreen.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/JHContactTrue.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/JHContactTrue.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue.xcworkspace/xcuserdata/junhuai.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue.xcworkspace/xcuserdata/junhuai.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JHContactTrue/Support/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JHContactTrue/Support/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFCompatibilityMacros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFAutoPurgingImageCache.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFCompatibilityMacros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFHTTPSessionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFImageDownloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworkActivityIndicatorManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworkReachabilityManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFSecurityPolicy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLRequestSerialization.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLResponseSerialization.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLSessionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIActivityIndicatorView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIButton+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIImage+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIImageView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIKit+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIProgressView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIRefreshControl+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIWebView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFAutoPurgingImageCache.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFCompatibilityMacros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFHTTPSessionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFImageDownloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFNetworkActivityIndicatorManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFNetworkReachabilityManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFSecurityPolicy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFURLRequestSerialization.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFURLResponseSerialization.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFURLSessionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIActivityIndicatorView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIButton+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIImage+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIImageView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIKit+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIProgressView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIRefreshControl+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIWebView+AFNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/AFNetworking.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/junhuai.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-JHContactTrue/Pods-JHContactTrue.release.xcconfig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +107,7 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="450" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_516BBCBD-3644-48B4-A949-0EEAB69C71BC" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6C373302-0C22-45EB-9929-DFA6404BE6B5" />
   <component name="FavoritesManager">
     <favorites_list name="JHContactTrue" />
   </component>
@@ -27,13 +116,16 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1Um4VTo1toaPtXeqO5zAaEblo3j" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="JHContactTrue" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/JHContactTrue.xcworkspace" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="CocoaPods" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -77,7 +169,9 @@
       <workItem from="1576203176530" duration="9413000" />
       <workItem from="1576221956305" duration="14018000" />
       <workItem from="1576416962047" duration="112130000" />
-      <workItem from="1576829769105" duration="3505000" />
+      <workItem from="1576829769105" duration="3806000" />
+      <workItem from="1577083646663" duration="1641000" />
+      <workItem from="1577254682160" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="reformat code">
       <created>1576466059896</created>
@@ -142,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576827246923</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add constrains">
+      <created>1576835652518</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835652518</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add pods">
+      <created>1576835774007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835774007</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +270,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="reformat code" />
     <MESSAGE value="目录结构优化" />
     <MESSAGE value="次级页面完成" />
@@ -171,7 +280,9 @@
     <MESSAGE value="添加群组" />
     <MESSAGE value="尝试改变 search 的 view" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="add constrains" />
+    <MESSAGE value="add pods" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pods" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="CidrCoverage/JHContactTrue/JHContactTrue.json" NAME="JHContactTrue Coverage Results" MODIFIED="1576644167033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="llvm-cov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

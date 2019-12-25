@@ -79,6 +79,7 @@
 		B53AAA4E94989C4FEE3B8C5C /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
 		B53AAC2CC67129100281B6BD /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
 		B53AAD1975747ED75916041F /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		B53AAD72CC6505A732B55B04 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		B53AAE0BE008B9B98D207E02 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B53AAE78222BFF239C30F2E9 /* JHPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPersonModel.h; sourceTree = "<group>"; };
 		B53AAE9D8166628E44096E7E /* JHContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHContactManager.h; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 				7F97448D239F42C00058D80A /* Products */,
 				E6FDE0A4D96873B989A00C6F /* Pods */,
 				7A276E8C410E245F72901471 /* Frameworks */,
+				B53AAD72CC6505A732B55B04 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,7 +271,6 @@
 				C19EE349640CE2536C09C752 /* Pods-JHContactTrue.debug.xcconfig */,
 				A53931A242E2B3304760B2B9 /* Pods-JHContactTrue.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -593,7 +594,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W3CX85YLJ;
 				INFOPLIST_FILE = JHContactTrue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,7 +613,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W3CX85YLJ;
 				INFOPLIST_FILE = JHContactTrue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
